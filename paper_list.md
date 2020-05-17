@@ -63,4 +63,4 @@ this paper used multi-head setting for training multiple tasks at the same time)
 
 ## Meta learning
 1. [META DROPOUT](https://openreview.net/pdf?id=BJgd81SYwr)
-2. 
+2. [Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation](https://openreview.net/pdf?id=SJl5Np4tPr)
