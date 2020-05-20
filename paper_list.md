@@ -1,6 +1,6 @@
 ## Optimization & Generalization
 1. [ProxSGD](https://openreview.net/pdf?id=HygpthEtvr): adjusted gradients for L1 norm to get more accurate 0 weights.
-2. *[Unordered gradient estimator for discrete random variable](https://openreview.net/pdf?id=rklEj2EFvB): an alternative solution of Gumbel-softmax with smaller variance and non-biased.
+
 3. *[EFFECT OF ACTIVATION FUNCTIONS ON THE TRAINING OF OVERPARAMETRIZED NEURAL NETS](https://openreview.net/pdf?id=rkgfdeBYvH): check Eq.2, may be related to theory proof of DRL, check related work [A Convergence Theory for Deep Learning via Over-Parameterization](http://proceedings.mlr.press/v97/allen-zhu19a.html), [Neural Tangent Kernel](http://papers.nips.cc/paper/8076-neural-tangent-kernel-convergence-and-generalization-in-neural-networks.pdf).
 4. [LAMB](https://openreview.net/pdf?id=Syx4wnEtvH): A method of layer-wise adaptive learning rate for large batch optimization  for deep learning, which can significantly reduce training time of large model of large dataset, such as BERT.
    
@@ -29,7 +29,10 @@ and Generalized Contrastive Learning](https://arxiv.org/pdf/1805.08651.pdf))
 4. [Target-Embedding Autoencoders for Supervised Representation Learning](https://openreview.net/pdf?id=BygXFkSYDH): for high-dimensional target space, such as multi-label or sequence forecasting. 
 
 ## Inference methods
+
 1. [SUMO](https://openreview.net/pdf?id=SylkYeHtwr): combined by estimators from IWAE(Importance Weighted AutorEncoder) and Russian roulette estimator, unbiased estimator of log probability of latent variable models.
+
+2. *[Unordered gradient estimator for discrete random variable](https://openreview.net/pdf?id=rklEj2EFvB): an alternative solution of Gumbel-softmax with smaller variance and non-biased.
 
 ## Continual learning
 
@@ -41,7 +44,7 @@ product of a shared weight among all ensemble members and a rank-one matrix per 
 BAYESIAN NEURAL NETWORKS](https://openreview.net/pdf?id=HklUCCVKDB): update learning rate of mean of weights by its stddev, which is very similar with natural gradient, the prior is a mixture Gaussian with 2 components in this paper.
 
 3. [CONTINUAL LEARNING WITH ADAPTIVE WEIGHTS
-(CLAW)](https://openreview.net/pdf?id=Hklso24Kwr), using 3 extra parameters to control the dropout rate of hidden units and those parameters are inferred by an extra amortized inference network (like VAE's encoder)
+(CLAW)](https://openreview.net/pdf?id=Hklso24Kwr: proposes an approach for Bayesian neural networks in continuallearning, which applies 3 extra parameters to each hidden unit for modelingthe posterior of the dropout rate, and those parameters are inferred by anextra amortized inference network (like VAE’s encoder) without taskidentifications. It avoids learning separate weights or masks for each taskand shows much better performance than vanilla Variational ContinualLearning (VCL) with coresets.
 
 ## Transfer learning
 
@@ -60,6 +63,7 @@ this paper used multi-head setting for training multiple tasks at the same time)
 
     [The condition number of the matrix measures the ratio of the maximum relative stretching to the maximum relative shrinking that matrix does to any non zero vectors.] 
 3. [GRADIENTS AS FEATURES FOR DEEP REPRESENTATION LEARNING](https://openreview.net/pdf?id=BkeoaeHKDS): use gradients w.r.t. parameters of upper layers (close to output) of a pre-trained model as features, which is a local linear approximation of fine-tuning (by Taylor expansion) and then can be theoretically analyzed by [NTK](http://papers.nips.cc/paper/8076-neural-tangent-kernel-convergence-and-generalization-in-neural-networks.pdf) or related approaches. 
+4. [ADVERSARIALLY ROBUST TRANSFER LEARNING](https://openreview.net/pdf?id=ryebG04YvB)
 
 ## Meta learning
 1. [META DROPOUT](https://openreview.net/pdf?id=BJgd81SYwr)
